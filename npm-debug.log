@@ -1,0 +1,90 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@3.3.12
+3 info using node@v0.12.2
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec { raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/git/npm_escan',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/shunzheng/.npm/escore/1.0.0/package.tgz not in flight; packing
+9 info lifecycle escore@1.0.0~prepublish: escore@1.0.0
+10 silly lifecycle escore@1.0.0~prepublish: no script for prepublish, continuing
+11 verbose tar pack [ '/Users/shunzheng/.npm/escore/1.0.0/package.tgz',
+11 verbose tar pack   '/Users/git/npm_escan' ]
+12 verbose tarball /Users/shunzheng/.npm/escore/1.0.0/package.tgz
+13 verbose folder /Users/git/npm_escan
+14 verbose addLocalTarball adding from inside cache /Users/shunzheng/.npm/escore/1.0.0/package.tgz
+15 silly cache afterAdd escore@1.0.0
+16 verbose afterAdd /Users/shunzheng/.npm/escore/1.0.0/package/package.json not in flight; writing
+17 verbose afterAdd /Users/shunzheng/.npm/escore/1.0.0/package/package.json written
+18 silly publish { name: 'escore',
+18 silly publish   version: '1.0.0',
+18 silly publish   description: 'Tool of website performance analysis',
+18 silly publish   main: 'index.js',
+18 silly publish   dependencies: {},
+18 silly publish   devDependencies: { phantomjs: '~1.9.18' },
+18 silly publish   scripts: { test: 'phantomjs index.js http://m.baidu.com' },
+18 silly publish   bin: { escan: './npm-tools/escan' },
+18 silly publish   keywords: [ 'escan', 'performance' ],
+18 silly publish   author: { name: 'shun.zheng' },
+18 silly publish   license: 'ISC',
+18 silly publish   readme: '## Escan网页检测打分工具\n\n基于Phantomjs的页面检测工具，可以帮你发现页面资源、请求、网络等方面存在的一些问题，并对页面进行综合打分。\n\n### 安装\n\n\t$ npm install -g escore\n\n### 使用\n\n\tescore http://url..\n\n',
+18 silly publish   readmeFilename: 'README.md',
+18 silly publish   _id: 'escore@1.0.0',
+18 silly publish   _shasum: 'a5b2422a3106970db635d8c5a121e2f97a2c7822',
+18 silly publish   _from: '.' }
+19 verbose getPublishConfig undefined
+20 silly mapToRegistry name escore
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/escore
+24 verbose publish registryBase https://registry.npmjs.org/
+25 silly publish uploading /Users/shunzheng/.npm/escore/1.0.0/package.tgz
+26 verbose request uri https://registry.npmjs.org/escore
+27 verbose request sending authorization for write operation
+28 info attempt registry request try #1 at 16:45:32
+29 verbose request using bearer token for auth
+30 verbose request id 22f32c048c337269
+31 http request PUT https://registry.npmjs.org/escore
+32 http 403 https://registry.npmjs.org/escore
+33 verbose headers { 'content-type': 'application/json',
+33 verbose headers   'cache-control': 'max-age=60',
+33 verbose headers   'content-length': '98',
+33 verbose headers   'accept-ranges': 'bytes',
+33 verbose headers   date: 'Tue, 10 Nov 2015 08:45:35 GMT',
+33 verbose headers   via: '1.1 varnish',
+33 verbose headers   connection: 'keep-alive',
+33 verbose headers   'x-served-by': 'cache-sin6920-SIN',
+33 verbose headers   'x-cache': 'MISS',
+33 verbose headers   'x-cache-hits': '0',
+33 verbose headers   'x-timer': 'S1447145135.053978,VS0,VE791' }
+34 verbose request invalidating /Users/shunzheng/.npm/registry.npmjs.org/escore on PUT
+35 error publish Failed PUT 403
+36 verbose stack Error: You do not have permission to publish 'escore'. Are you logged in as the correct user? : escore
+36 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+36 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+36 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+36 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:198:22)
+36 verbose stack     at Request.emit (events.js:110:17)
+36 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1082:10)
+36 verbose stack     at Request.emit (events.js:129:20)
+36 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+36 verbose stack     at IncomingMessage.emit (events.js:129:20)
+36 verbose stack     at _stream_readable.js:908:16
+37 verbose statusCode 403
+38 verbose pkgid escore
+39 verbose cwd /Users/git/npm_escan
+40 error Darwin 14.3.0
+41 error argv "node" "/usr/local/bin/npm" "publish"
+42 error node v0.12.2
+43 error npm  v3.3.12
+44 error code E403
+45 error You do not have permission to publish 'escore'. Are you logged in as the correct user? : escore
+46 error If you need help, you may report this error at:
+46 error     <https://github.com/npm/npm/issues>
+47 verbose exit [ 1, true ]

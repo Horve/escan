@@ -1,0 +1,22 @@
+{
+  "name": "escore",
+  "version": "1.0.0",
+  "description": "Tool of website performance analysis",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "phantomjs": "~1.9.18"
+  },
+  "scripts": {
+    "test": "phantomjs index.js http://m.baidu.com"
+  },
+  "bin": {
+    "escan": "./npm-tools/escan"
+  },
+  "keywords": [
+    "escan",
+    "performance"
+  ],
+  "author": "shun.zheng",
+  "license": "ISC"
+}
