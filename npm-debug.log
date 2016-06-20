@@ -47,44 +47,37 @@
 25 silly publish uploading /Users/shunzheng/.npm/escore/1.0.0/package.tgz
 26 verbose request uri https://registry.npmjs.org/escore
 27 verbose request sending authorization for write operation
-28 info attempt registry request try #1 at 16:45:32
+28 info attempt registry request try #1 at 16:47:08
 29 verbose request using bearer token for auth
-30 verbose request id 22f32c048c337269
+30 verbose request id ec4291b76f505bfa
 31 http request PUT https://registry.npmjs.org/escore
-32 http 403 https://registry.npmjs.org/escore
-33 verbose headers { 'content-type': 'application/json',
-33 verbose headers   'cache-control': 'max-age=60',
-33 verbose headers   'content-length': '98',
-33 verbose headers   'accept-ranges': 'bytes',
-33 verbose headers   date: 'Tue, 10 Nov 2015 08:45:35 GMT',
-33 verbose headers   via: '1.1 varnish',
-33 verbose headers   connection: 'keep-alive',
-33 verbose headers   'x-served-by': 'cache-sin6920-SIN',
-33 verbose headers   'x-cache': 'MISS',
-33 verbose headers   'x-cache-hits': '0',
-33 verbose headers   'x-timer': 'S1447145135.053978,VS0,VE791' }
-34 verbose request invalidating /Users/shunzheng/.npm/registry.npmjs.org/escore on PUT
-35 error publish Failed PUT 403
-36 verbose stack Error: You do not have permission to publish 'escore'. Are you logged in as the correct user? : escore
-36 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
-36 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
-36 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
-36 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:198:22)
-36 verbose stack     at Request.emit (events.js:110:17)
-36 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1082:10)
-36 verbose stack     at Request.emit (events.js:129:20)
-36 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1009:12)
-36 verbose stack     at IncomingMessage.emit (events.js:129:20)
-36 verbose stack     at _stream_readable.js:908:16
-37 verbose statusCode 403
-38 verbose pkgid escore
-39 verbose cwd /Users/git/npm_escan
-40 error Darwin 14.3.0
-41 error argv "node" "/usr/local/bin/npm" "publish"
-42 error node v0.12.2
-43 error npm  v3.3.12
-44 error code E403
-45 error You do not have permission to publish 'escore'. Are you logged in as the correct user? : escore
-46 error If you need help, you may report this error at:
-46 error     <https://github.com/npm/npm/issues>
-47 verbose exit [ 1, true ]
+32 info retry will retry, error on last attempt: Error: socket hang up
+33 info attempt registry request try #2 at 16:48:20
+34 verbose request using bearer token for auth
+35 http request PUT https://registry.npmjs.org/escore
+36 info retry will retry, error on last attempt: Error: socket hang up
+37 info attempt registry request try #3 at 16:50:23
+38 verbose request using bearer token for auth
+39 http request PUT https://registry.npmjs.org/escore
+40 verbose request invalidating /Users/shunzheng/.npm/registry.npmjs.org/escore on PUT
+41 error publish Failed PUT undefined
+42 verbose stack Error: socket hang up
+42 verbose stack     at createHangUpError (_http_client.js:215:15)
+42 verbose stack     at TLSSocket.socketOnEnd (_http_client.js:300:23)
+42 verbose stack     at TLSSocket.emit (events.js:129:20)
+42 verbose stack     at _stream_readable.js:908:16
+42 verbose stack     at process._tickCallback (node.js:355:11)
+43 verbose cwd /Users/git/npm_escan
+44 error Darwin 14.3.0
+45 error argv "node" "/usr/local/bin/npm" "publish"
+46 error node v0.12.2
+47 error npm  v3.3.12
+48 error code ECONNRESET
+49 error network socket hang up
+49 error network This is most likely not a problem with npm itself
+49 error network and is related to network connectivity.
+49 error network In most cases you are behind a proxy or have bad network settings.
+49 error network
+49 error network If you are behind a proxy, please make sure that the
+49 error network 'proxy' config is set properly.  See: 'npm help config'
+50 verbose exit [ 1, true ]
